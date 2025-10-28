@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Upload file</h1>
+        <form enctype="multipart/form-data" method="post" action="process.php">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" name="submit">
+        </form>
+        <h1>Read file</h1>
+        <form enctype="multipart/form-data" method="post" action="text.php">
+            <textarea type="text" name="fileToWrite" id="fileToWrite"></textarea><br>
+            <input type="submit" name="submit">
+        </form>
+        <form enctype="multipart/form-data" method="post" action="list.php">
+            <button type="submit" name="submit">List in Directoria</button>
+        </form>
+    </body>
+</html>
