@@ -4,7 +4,7 @@ echo "Hello World! :) <br>";
 
 //2 Task
 $x = 5;
-$y = "Vova";
+$y = "Anna";
 $a = true;
 $b = 67.67;
 
@@ -12,14 +12,14 @@ echo $x, $y, $a, $b;
 echo "<br>";
 
 var_dump(5);
-var_dump("vova");
+var_dump("anna");
 var_dump(true);
 var_dump(67.67);
 echo "<br>";
 
 //3 Task
-$A = "Vova";
-$B = "Horielov";
+$A = "Anna";
+$B = "Krasnobaieva";
 echo $A, $B;
 echo "<br>";
 
@@ -46,7 +46,7 @@ while ($j >= 1) {
 echo "<br>";
 
 //6 Task
-$student = array("first_name"=>"Volodymyr", "last_name"=>"Horielov", "age"=>19, "occupation"=>"computer scince");
+$student = array("first_name"=>"Anna", "last_name"=>"Krasnobaieva", "age"=>19, "occupation"=>"computer scince");
 
 foreach ($student as $i => $j) {
     echo "$i: $j <br>";
