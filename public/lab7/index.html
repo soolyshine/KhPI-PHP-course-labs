@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <h2>Test</h2>
+    <button onclick="loadReport()">Load html report</button>
+    <button onclick="loadData()">Load data from session</button>
+    <p id="time"></p>
+    <pre id="output"></pre>
+    <script>
+    function loadReport() {
+        const start = performance.now();
+        fetch('generate-report.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('output').textContent = data.slice(0, 500) + '...';
+                const end = performance.now();
+                document.getElementById('time').textContent = 'Time downloading: ' + ((end - start)/1000).toFixed(2);
+            });
+    }
+    
+    function loadData() {
+        const start = performance.now();
+        fetch('session-cache.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('output').textContent = data;
+                const end = performance.now();
+                document.getElementById('time').textContent = 'Time downloading: ' + ((end - start)/1000).toFixed(2);
+            });
+    }
+    </script>
+</body>
+</html>
